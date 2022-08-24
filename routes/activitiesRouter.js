@@ -1,12 +1,12 @@
 const express = require('express');
 const activitiesRouter = express.Router();
 
-const activity = require('../controller/activitiesController');
+const activitiesController = require('../controller/activitiesController');
 
-activitiesRouter.get('/', activity.get_allAct);
-activitiesRouter.get('/:activityId', activity.get_soloAct);
-activitiesRouter.post('/create', activity.create_Act);
-activitiesRouter.patch('/:activityId', activity.edit_Act);
-activitiesRouter.delete('/:activityId', activity.delete_Act);
+activitiesRouter.get('/',activitiesController.get_allAct);
+activitiesRouter.get('/:activityId',activitiesController.get_soloAct);
+activitiesRouter.post('/create',activitiesController.create_Act);
+activitiesRouter.patch('/:activityId',activitiesController.edit_Act);
+activitiesRouter.delete('/:activityId',activitiesController.delete_Act);
 
 module.exports = activitiesRouter;

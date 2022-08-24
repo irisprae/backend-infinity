@@ -25,7 +25,7 @@ if (config.isVercel) {
 app.use(express.json());
 app.use(
     cors({
-      origin: '*',
+      origin: ['http://localhost:5173', 'https://infinity-health.vercel.app'],
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     })
   );
